@@ -1,0 +1,26 @@
+name = "millipede"
+version = "0.1.0"
+defaultTargets = ["Millipede"]
+
+[[lean_lib]]
+name = "Millipede"
+precompileModules = true
+
+[[lean_lib]]
+name = "Tests"
+
+[[lean_exe]]
+name = "mpc"
+root = "Mpc"
+
+[[lean_exe]]
+name = "differential"
+root = "Tests.Differential.Main"
+
+[[lean_exe]]
+name = "cosim"
+root = "Tests.CoSim.Main"
+
+[[lean_exe]]
+name = "a64cosim"
+root = "Tests.A64CoSim.Main"

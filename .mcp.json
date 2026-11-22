@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "lean-lsp": {
+      "command": "/home/dev/tools/bin/uvx",
+      "args": ["lean-lsp-mcp"],
+      "env": {
+        "LEAN_PROJECT_PATH": "/workspaces/millipede",
+        "LEAN_MCP_DISABLED_TOOLS": "lean_leansearch,lean_loogle,lean_leanfinder,lean_hammer_premise"
+      }
+    }
+  }
+}
