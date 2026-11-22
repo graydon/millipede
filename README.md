@@ -33,7 +33,19 @@ Some characteristics:
 
 This repo wasn't just written by an LLM to save time, but also because I literally couldn't have written it myself. Most of the theorems much less proofs are over my head. I'm trying to understand what is here, and part of this exploration is the question of how to relate to work I'm _guiding_ while not fully understanding what it's doing. I expect this phenomenon to get worse.
 
-I am not providing this as a suggestion for anyone to rush out and use (it's slow and generates bad code) or even necessarily spend any of their precious time on earth trying to review for correctness. It's an exploratory project, a provocation to other PL people who know this landscape better than me to try something similar, and mainly just a concrete answer to a question I keep getting asked.
+I did do the following with the LLM:
+  - Asked for, and discussed the implementation of, all of the above characteristics.
+  - Had it do random differential testing between several pairs:
+    - Core term translations and the Lean functions.
+    - Executions and the computed cost models.
+    - The machine environment model and qemu emulator / host machine states.
+  - Had it do mutation testing at each stage of the lowering.
+  - Had it do rounds of skeptical self-review and criticism about proof style, content, vacuity and triviality, etc. from the perspective of a person who believes LLMs only produce useless lies.
+  - Read a decent portion of the output for a couple days to convince myself it wasn't all lies.
+
+I know all this has the distinct smell of writing "don't make mistakes" in the prompt, and for that I apologize. It is truly unclear to me how to do QA on something I substantially don't understand. I am trying my best.
+
+I am not providing this as a suggestion for anyone to rush out and use (it's slow and generates bad code) or even necessarily spend any of their precious time on earth trying to review for correctness. I will keep doing that part myself. I offer it more as a sketch, perhaps a provocation to other PL people who know this landscape better than me to try something similar but better, and mainly just a concrete answer to a question I keep getting asked.
 
 ## Navigation
 
